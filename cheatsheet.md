@@ -16,8 +16,16 @@ Note: Keys can appear more than once because git reads the configuration from di
 ## Getting help
 ``` $ git help <verb>``` 
 ``` $ git <verb> --help``` 
-``` $ man git-<verb>``` only for unix
-``` $ git <verb> -h``` show parameters of said command
+``` $ man git-<verb>``` Only for unix
+``` $ git <verb> -h``` Show parameters of said command
 
 ## Getting a Git repository
-``` $ git init``` Initializing a Repository in an Existing Directory
+``` $ git init``` Initializing a repository in an existing directory
+``` $ git clone <url>``` Cloning existing Repository from url
+``` $ git clone <url> <target>``` Clones an exisisting repository from a url and puts it in a directory called "target"
+
+## Basic commands
+``` $ git status``` Checking status of the working directory
+``` $ git add . ``` Add all files to tracked files
+``` $ git add <filename>``` Add a single file to tracked files
+``` $ git add <directory>``` Add all files in a directory recursively to tracked files
