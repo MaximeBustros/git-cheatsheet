@@ -33,7 +33,10 @@ Note: Keys can appear more than once because git reads the configuration from di
 ``` $ git commit -m <message>``` Commit staged files  
 ``` $ git commit --amend``` Replace previous commit with most recent staged files. Ammend is useful when forgetting to stage a file or making a mistake in the commit message
 
+## Uncommiting
+``` $ git reset HEAD <file>``` Removes a file from staged files
+``` $ git checkout <file>``` Remove
 ## Status command
-``` $ git status -s``` Checking status of the working directory  
 ``` $ git status``` Checking status of the working directory  
+``` $ git status -s``` Checking the short status of the working directory  
 
