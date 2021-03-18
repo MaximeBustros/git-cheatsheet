@@ -14,18 +14,18 @@ Note: Keys can appear more than once because git reads the configuration from di
 ```$ git config --global init.defaultBranch main``` Change default main branch  
 
 ## Getting help
-``` $ git help <verb>``` 
-``` $ git <verb> --help``` 
-``` $ man git-<verb>``` Only for unix
-``` $ git <verb> -h``` Show parameters of said command
+``` $ git help <verb>```  
+``` $ git <verb> --help```  
+``` $ man git-<verb>``` Only for unix  
+``` $ git <verb> -h``` Show parameters of said command  
 
 ## Getting a Git repository
-``` $ git init``` Initializing a repository in an existing directory
-``` $ git clone <url>``` Cloning existing Repository from url
-``` $ git clone <url> <target>``` Clones an exisisting repository from a url and puts it in a directory called "target"
+``` $ git init``` Initializing a repository in an existing directory  
+``` $ git clone <url>``` Cloning existing Repository from url  
+``` $ git clone <url> <target>``` Clones an exisisting repository from a url and puts it in a directory called "target"  
 
 ## Basic commands
-``` $ git status``` Checking status of the working directory
-``` $ git add . ``` Add all files to tracked files
-``` $ git add <filename>``` Add a single file to tracked files
-``` $ git add <directory>``` Add all files in a directory recursively to tracked files
+``` $ git status``` Checking status of the working directory  
+``` $ git add . ``` Add all files to tracked files  
+``` $ git add <filename>``` Add a single file to tracked files  
+``` $ git add <directory>``` Add all files in a directory recursively to tracked files  
