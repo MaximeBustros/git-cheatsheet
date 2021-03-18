@@ -24,8 +24,16 @@ Note: Keys can appear more than once because git reads the configuration from di
 ``` $ git clone <url>``` Cloning existing Repository from url  
 ``` $ git clone <url> <target>``` Clones an exisisting repository from a url and puts it in a directory called "target"  
 
-## Basic commands
-``` $ git status``` Checking status of the working directory  
+## Add command
 ``` $ git add . ``` Add all files to tracked files  
 ``` $ git add <filename>``` Add a single file to tracked files  
 ``` $ git add <directory>``` Add all files in a directory recursively to tracked files  
+
+## Commit command
+``` $ git commit -m <message>``` Commit staged files  
+``` $ git commit --amend``` Replace previous commit with most recent staged files. Ammend is useful when forgetting to stage a file or making a mistake in the commit message
+
+## Status command
+``` $ git status -s``` Checking status of the working directory  
+``` $ git status``` Checking status of the working directory  
+
