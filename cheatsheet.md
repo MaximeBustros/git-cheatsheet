@@ -33,10 +33,25 @@ Note: Keys can appear more than once because git reads the configuration from di
 ``` $ git commit -m <message>``` Commit staged files  
 ``` $ git commit --amend``` Replace previous commit with most recent staged files. Ammend is useful when forgetting to stage a file or making a mistake in the commit message
 
-## Uncommiting
+## Uncommiting files
 ``` $ git reset HEAD <file>``` Removes a file from staged files
 ``` $ git checkout <file>``` Remove
 ## Status command
 ``` $ git status``` Checking status of the working directory  
 ``` $ git status -s``` Checking the short status of the working directory  
+
+## Ignoring files
+To ignore files add a .gitignore in the root directory
+* Blank lines or lines starting with # are ignored.
+* Standard glob patterns work, and will be applied recursively throughout the entire working tree
+* You can start patterns with a forward slash (/) to avoid recursivity.
+* You can end patterns with a forward slash (/) to specify a directory.
+* You can negate a pattern by starting it with an exclamation point (!).
+
+### Glob patterns
+* (\*) matches 0 or more characters
+* \[abc\] matches any character inside the brackets
+* ? matches a single character
+* [0-9] matches any character between them (in this case 0 through 9)
+* ```match nested directories; a/**/z would match a/z, a/b/z, a/b/c/z, and so on. ```
 
