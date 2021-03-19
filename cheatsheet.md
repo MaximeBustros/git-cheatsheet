@@ -53,5 +53,46 @@ To ignore files add a .gitignore in the root directory
 * \[abc\] matches any character inside the brackets
 * ? matches a single character
 * [0-9] matches any character between them (in this case 0 through 9)
+* You can negate a pattern by starting it with an exclamation point (!)
 * ```match nested directories; a/**/z would match a/z, a/b/z, a/b/c/z, and so on. ```
 
+## Git Diff commands
+``` $ git diff``` shows changes that were not yet staged  
+``` $ git diff --staged or --cached``` Shows changes between staged and last commit  
+``` $ git difftool --tool-help``` Check external tools for diffing  
+
+## Removing files
+``` $ git rm <filename>``` Removes file from working directory and stages removal  
+``` $ git rm --cached <filename>``` Remove file from staging area but keep it and in the working directory  
+
+## Moving Files
+``` $ git mv <source> <destination>``` Moves file and track the move
+
+## Viewing Commit history
+``` $ git log``` lists the commits made in that repository in reverse chronological order
+```-p or --patch``` Shows the difference (the patch output)
+```-<number>``` Shows n number of entries
+```--stat``` Shows number of changes on each files
+```--stat``` Show statistics for files modified in each commit.
+```--shortstat``` Display only the changed/insertions/deletions line from the --stat command.
+```--name-only``` Show the list of files modified after the commit information.
+```--name-status``` Show the list of files affected with added/modified/deleted information as well.
+```--abbrev-commit``` Show only the first few characters of the SHA-1 checksum instead of all 40.
+```--relative-date``` Display the date in a relative format (for example, “2 weeks ago”) instead of using the full date format.
+```--graph``` Display an ASCII graph of the branch and merge history beside the log output.
+```--pretty``` Show commits in an alternate format. Option values include oneline, short,
+```full, fuller, and format``` (where you specify your own format).
+```--oneline``` Shorthand for --pretty=oneline --abbrev-commit used together.
+```$ git log -S <Text>``` Checks last time text was changed (Could be useful for checking the last time a reference to a function was changed)
+
+### Limiting output
+```-<n>``` Show only the last n commits
+```--since, --after``` Limit the commits to those made after the specified date.
+```--until, --before``` Limit the commits to those made before the specified date.
+```--author``` Only show commits in which the author entry matches the
+specified string.
+```--committer``` Only show commits in which the committer entry matches the
+specified string.
+```--grep``` Only show commits with a commit message containing the string
+
+##
