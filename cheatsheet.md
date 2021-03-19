@@ -35,7 +35,12 @@ Note: Keys can appear more than once because git reads the configuration from di
 
 ## Uncommiting files
 ``` $ git reset HEAD <file>``` Removes a file from staged files
-``` $ git checkout <file>``` Remove
+``` $ git restore --staged <file>``` Unstages a file but do not remove changes
+``` $ git restore <file>``` Unstage a file and discard changes in working directory
+
+## Remove changes
+``` $ git checkout -- <file>``` Remove changes to a file
+
 ## Status command
 ``` $ git status``` Checking status of the working directory  
 ``` $ git status -s``` Checking the short status of the working directory  
@@ -94,5 +99,7 @@ specified string.
 ```--committer``` Only show commits in which the committer entry matches the
 specified string.  
 ```--grep``` Only show commits with a commit message containing the string  
+```-S``` Only show commits adding or removing code matching the string  
+```--no-merges``` Removes merge commits
 
-##
+## Working with remotes
