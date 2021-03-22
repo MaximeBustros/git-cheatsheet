@@ -105,4 +105,3 @@ specified string.
 ## Working with remotes
 ```$ git remote -v``` Shows remote    
 ```$ git remote add <shortname> <url>``` Adding a remote
-
