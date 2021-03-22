@@ -104,6 +104,21 @@ specified string.
 ## Working with remotes
 ```$ git remote -v``` Shows remote    
 ```$ git remote add <shortname> <url>``` Adding a remote
-``` $ git fetch ``` Gets all the information that you do not have yet on your local machine  
-``` $ git fetch <shortname>``` Gets all the information that you do not have yet on your local machine  
+```$ git remote show <shortname>``` Shows information about remote branch
+```$ git remote rename <shortname> <newname>``` Rename
+```$ git remote remove|rm <shortname>``` Remove remote
+
+```$ git fetch ``` Gets all the information that you do not have yet on your local machine  
+```$ git fetch <shortname>``` Gets all the information that you do not have yet on your local machine  
 NOTE: When cloning a repo it automatically adds that remote repository under the name 'origin'
+```$ git push origin master``` Push master branch to url pointed by origin
+
+## Tagging
+```$ git tag``` Lists tags
+```$ git tag -l <wildcard pattern>``` Tags that match wildcard pattern
+NOTE: Annotated tags are stored in full, lightweights are not.
+Annotated tags are considered best practice, whereas lightweights should only be used for temporary purposes.
+```$ git tag -a <tag-name> -m "<message>"``` Create annotated tag
+```-s``` Allows to sign the tag  
+```$git show <tag-name>``` Check the tag data along with the commit that was tagged  
+```$git tag -a <tag-name> -m "<message>" <commit-hash>``` Add tag to commit-hash
