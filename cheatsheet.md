@@ -31,8 +31,7 @@ Note: Keys can appear more than once because git reads the configuration from di
 
 ## Commit command
 ``` $ git commit -m <message>``` Commit staged files  
-``` $ git commit --amend``` Replace previous commit with most recent staged files. Ammend is useful when forgetting to stage a file or making a mistake in the commit message
-
+``` $ git commit --amend``` Replace previous commit with most recent staged files. Ammend is useful when forgetting to stage a file or making a mistake in the commit message  
 ## Uncommiting files
 ``` $ git reset HEAD <file>``` Removes a file from staged files
 ``` $ git restore --staged <file>``` Unstages a file but do not remove changes
@@ -105,3 +104,6 @@ specified string.
 ## Working with remotes
 ```$ git remote -v``` Shows remote    
 ```$ git remote add <shortname> <url>``` Adding a remote
+``` $ git fetch ``` Gets all the information that you do not have yet on your local machine  
+``` $ git fetch <shortname>``` Gets all the information that you do not have yet on your local machine  
+NOTE: When cloning a repo it automatically adds that remote repository under the name 'origin'
