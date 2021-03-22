@@ -103,3 +103,6 @@ specified string.
 ```--no-merges``` Removes merge commits
 
 ## Working with remotes
+```$ git remote -v``` Shows remote    
+```$ git remote add <shortname> <url>``` Adding a remote
+
