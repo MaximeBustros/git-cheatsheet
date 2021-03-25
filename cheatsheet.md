@@ -138,13 +138,24 @@ Annotated tags are considered best practice, whereas lightweights should only be
 ```$ git config --global alias.visual '!gitk'``` Running external commands  
 
 ## Git branches
-```$ git branch <branch-name>``` Create a branch with branch-name based on current HEAD
-```$ git branch <branch-name> <commit-hash>``` Creates a branch with branch-name based on commit-hash
+```$ git branch <branch-name>``` Create a branch with branch-name based on current HEAD  
+```$ git branch <branch-name> <commit-hash>``` Creates a branch with branch-name based on commit-hash  
 ```$ git checkout <branch-name>``` Switch to branch "branch-name", NOTE: It moves the HEAD pointer  
-```$ git checkout -b <branch-name>``` Creates a branch "branch-name" and switches to it
-```$ git switch -``` Return to your previously checked out branch
+```$ git checkout -b <branch-name>``` Creates a branch "branch-name" and switches to it  
+```$ git switch -``` Return to your previously checked out branch  
 ```$ git merge <branch-name>``` Merge branch-name to currently checked out branch  
-```$ git mergetool``` gui tool to help solve conflicts
-```$ git status``` to check if there are still any conflicts from trying to merge
-```$ git commit``` to finally proceed with merge after all conflicts were resolved
+```$ git mergetool``` gui tool to help solve conflicts  
+```$ git status``` to check if there are still any conflicts from trying to merge  
+```$ git commit``` to finally proceed with merge after all conflicts were resolved  
+
+### Listing branches
+```$ git branch``` Listing of current branches  
+```-v``` Shows the last commit on each branch  
+```--no-merged``` Shows the branches who's features have not yet been merged into the current checked out branch  
+```merged``` Shows the branches who's features have been merged into the current checked out branch.  
+Note: merged branches can be deleted as their features are already taken into account in the current checked out branch.  
+```$ git branch --move bad-branch-name corrected-branch-name``` Rename branch from bad-branch-name to corrected-branch-name locally  
+```$ git push --set-upstream origin corrected-branch-name``` Push corrected-branch-name  
+```$ git push origin --delete bad-branch-name``` Delete bad-branch-name  
+
 
