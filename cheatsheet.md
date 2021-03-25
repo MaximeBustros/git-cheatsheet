@@ -159,4 +159,12 @@ Note: merged branches can be deleted as their features are already taken into ac
 ```$ git push origin --delete bad-branch-name``` Delete bad-branch-name  
 
 ## Remote Branches
-```$ git remote show <remote>```
+```$ git remote show <remote>``` Show information about remote branch
+```$ git checkout serverfix``` If the server fix branch does not exist locally and serverfix is a remote branch then create a local branch with that name and track the remote branch
+```$ git checkout serverfix /remote/origin/serverfix``` long command
+```$ git push origin <branch-name>``` To push a local branch to a remote repository
+```$ git checkout -b serverfix origin/serverfix``` Create local branch and checkout on it, based on remote server branch
+```$ git branch -u origin/serverfix``` Make local branch track origin/serverfix
+```$ git branch -vv``` To check branches and w
+```$ git fetch --all``` Get information for all remote branches
+```$ git pull``` === git fetch + git merge
