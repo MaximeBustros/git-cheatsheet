@@ -114,11 +114,11 @@ NOTE: When cloning a repo it automatically adds that remote repository under the
 ```$ git push origin master``` Push master branch to url pointed by origin
 
 ## Tagging
-```$ git tag``` Lists tags
-```$ git tag -l <wildcard pattern>``` Tags that match wildcard pattern
+```$ git tag``` Lists tags  
+```$ git tag -l <wildcard pattern>``` Tags that match wildcard pattern  
 NOTE: Annotated tags are stored in full, lightweights are not.
-Annotated tags are considered best practice, whereas lightweights should only be used for temporary purposes.
-```$ git tag -a <tag-name> -m "<message>"``` Create annotated tag
+Annotated tags are considered best practice, whereas lightweights should only be used for temporary purposes.  
+```$ git tag -a <tag-name> -m "<message>"``` Create annotated tag  
 ```-s``` Allows to sign the tag  
 ```$git show <tag-name>``` Check the tag data along with the commit that was tagged  
-```$git tag -a <tag-name> -m "<message>" <commit-hash>``` Add tag to commit-hash
+```$git tag -a <tag-name> -m "<message>" <commit-hash>``` Add tag to commit-hash  
