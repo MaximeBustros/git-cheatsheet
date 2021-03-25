@@ -122,3 +122,18 @@ Annotated tags are considered best practice, whereas lightweights should only be
 ```-s``` Allows to sign the tag  
 ```$git show <tag-name>``` Check the tag data along with the commit that was tagged  
 ```$git tag -a <tag-name> -m "<message>" <commit-hash>``` Add tag to commit-hash  
+```$ git tag -d <tag-name>``` To delete a local tag
+```$ git push origin --delete <tag-name>``` To delete a remote tag
+```$ git checkout <tag-name>``` To check tag
+```$ git checkout -b <branchname> <tagname>``` To create a branch from tag to be able to see changes
+
+## Git aliases
+### Examples
+```$ git config --global alias.co checkout```  co = checkout
+```$ git config --global alias.br branch```  br = branch
+```$ git config --global alias.ci commit```  ci = commit
+```$ git config --global alias.st status```  st = status
+```$ git config --global alias.unstage 'reset HEAD --'``` Unstage is equal to reset head
+```$ git config --global alias.last 'log -1 HEAD'``` Check last commit
+```$ git config --global alias.visual '!gitk'``` Running external commands
+
