@@ -158,4 +158,5 @@ Note: merged branches can be deleted as their features are already taken into ac
 ```$ git push --set-upstream origin corrected-branch-name``` Push corrected-branch-name  
 ```$ git push origin --delete bad-branch-name``` Delete bad-branch-name  
 
-
+## Remote Branches
+```$ git remote show <remote>```
