@@ -129,11 +129,22 @@ Annotated tags are considered best practice, whereas lightweights should only be
 
 ## Git aliases
 ### Examples
-```$ git config --global alias.co checkout```  co = checkout
-```$ git config --global alias.br branch```  br = branch
-```$ git config --global alias.ci commit```  ci = commit
-```$ git config --global alias.st status```  st = status
-```$ git config --global alias.unstage 'reset HEAD --'``` Unstage is equal to reset head
-```$ git config --global alias.last 'log -1 HEAD'``` Check last commit
-```$ git config --global alias.visual '!gitk'``` Running external commands
+```$ git config --global alias.co checkout```  co = checkout  
+```$ git config --global alias.br branch```  br = branch  
+```$ git config --global alias.ci commit```  ci = commit  
+```$ git config --global alias.st status```  st = status  
+```$ git config --global alias.unstage 'reset HEAD --'``` Unstage is equal to reset head  
+```$ git config --global alias.last 'log -1 HEAD'``` Check last commit  
+```$ git config --global alias.visual '!gitk'``` Running external commands  
+
+## Git branches
+```$ git branch <branch-name>``` Create a branch with branch-name based on current HEAD
+```$ git branch <branch-name> <commit-hash>``` Creates a branch with branch-name based on commit-hash
+```$ git checkout <branch-name>``` Switch to branch "branch-name", NOTE: It moves the HEAD pointer  
+```$ git checkout -b <branch-name>``` Creates a branch "branch-name" and switches to it
+```$ git switch -``` Return to your previously checked out branch
+```$ git merge <branch-name>``` Merge branch-name to currently checked out branch  
+```$ git mergetool``` gui tool to help solve conflicts
+```$ git status``` to check if there are still any conflicts from trying to merge
+```$ git commit``` to finally proceed with merge after all conflicts were resolved
 
