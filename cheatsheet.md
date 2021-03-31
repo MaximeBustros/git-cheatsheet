@@ -159,12 +159,32 @@ Note: merged branches can be deleted as their features are already taken into ac
 ```$ git push origin --delete bad-branch-name``` Delete bad-branch-name  
 
 ## Remote Branches
-```$ git remote show <remote>``` Show information about remote branch
-```$ git checkout serverfix``` If the server fix branch does not exist locally and serverfix is a remote branch then create a local branch with that name and track the remote branch
-```$ git checkout serverfix /remote/origin/serverfix``` long command
-```$ git push origin <branch-name>``` To push a local branch to a remote repository
-```$ git checkout -b serverfix origin/serverfix``` Create local branch and checkout on it, based on remote server branch
-```$ git branch -u origin/serverfix``` Make local branch track origin/serverfix
-```$ git branch -vv``` To check branches and w
-```$ git fetch --all``` Get information for all remote branches
-```$ git pull``` === git fetch + git merge
+```$ git remote show <remote>``` Show information about remote branch  
+```$ git checkout serverfix``` If the server fix branch does not exist locally and serverfix is a remote branch then create a local branch with that name and track the remote branch  
+```$ git checkout serverfix /remote/origin/serverfix``` long command  
+```$ git push origin <branch-name>``` To push a local branch to a remote repository  
+```$ git checkout -b serverfix origin/serverfix``` Create local branch and checkout on it, based on remote server branch  
+```$ git branch -u origin/serverfix``` Make local branch track origin/serverfix  
+```$ git branch -vv``` To check branches and w  
+```$ git fetch --all``` Get information for all remote branches  
+```$ git pull``` === git fetch + git merge  
+
+## Stashing
+```$ git stash``` Stash current changes
+```$ git stash push``` Stash current changes
+```$ git stash save``` Stash current changes
+```$ git stash --keep-index``` Stash current changes and staged files
+```$ git stash apply``` Apply last stashed, do not set staged
+```$ git stash apply --index``` Apply last stashed, and set staged as previously
+```$ git stash apply stash@{0}``` Apply stash@{0}
+```$ git stash -u``` stash unstaged files
+```$ git stash --all``` Stash all files including the ones that are not tracked and the ones that are ignored "gitignore"
+```$ git stash -p``` Stash interactively
+
+## Git Clean
+```$ git clean``` Remove files that are not tracked  
+```$ git clean -d``` Removes files that are not tracked and any subdirectories that would be empty as a result  
+```$ git clean -n``` Dry run of clean. This command shows what are the files that would be removed from running clean  
+```$ git clean -f``` Force clean. "Can be mandatory if clean.requireForce is set to true"
+```$ git clean -x``` Clean files that match gitignore
+```$ git clean -i``` Clean interactively
