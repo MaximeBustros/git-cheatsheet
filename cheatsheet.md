@@ -190,6 +190,6 @@ Note: merged branches can be deleted as their features are already taken into ac
 ```$ git clean -i``` Clean interactively
 
 ## Git search
-```$ git grep```
-```$ git log -S string``` pickaxe option: show us only those commits that changed the number of occurrences of that string
-```$ git log -L :git_deflate_bound:zlib.c``` See every change made to the function git_deflate_bound in the zlib.c
+```$ git grep```  
+```$ git log -S string``` pickaxe option: show us only those commits that changed the number of occurrences of that string  
+```$ git log -L :git_deflate_bound:zlib.c``` See every change made to the function git_deflate_bound in the zlib.c  
