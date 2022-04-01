@@ -34,8 +34,8 @@ Note: Keys can appear more than once because git reads the configuration from di
 ``` $ git commit -m <message>``` Commit staged files  
 ``` $ git commit --amend``` Replace previous commit with most recent staged files. Ammend is useful when forgetting to stage a file or making a mistake in the commit message  
 ## Uncommiting files
-``` $ git reset HEAD <file>``` Removes a file from staged files
-``` $ git restore --staged <file>``` Unstages a file but do not remove changes
+``` $ git reset HEAD <file>``` Removes a file from staged files  
+``` $ git restore --staged <file>``` Unstages a file but do not remove changes  
 ``` $ git restore <file>``` Unstage a file and discard changes in working directory
 
 ## Remove changes
@@ -43,7 +43,7 @@ Note: Keys can appear more than once because git reads the configuration from di
 
 ## Status command
 ``` $ git status``` Checking status of the working directory  
-``` $ git status -s``` Checking the short status of the working directory  
+``` $ git status -s``` Checking the short status of the working directory
 
 ## Ignoring files
 To ignore files add a .gitignore in the root directory
@@ -68,7 +68,7 @@ To ignore files add a .gitignore in the root directory
 
 ## Removing files
 ``` $ git rm <filename>``` Removes file from working directory and stages removal  
-``` $ git rm --cached <filename>``` Remove file from staging area but keep it and in the working directory  
+``` $ git rm --cached <filename>``` Remove file from staging area but keep it and in the working directory
 
 ## Moving Files
 ``` $ git mv <source> <destination>``` Moves file and track the move
@@ -88,44 +88,41 @@ To ignore files add a .gitignore in the root directory
 ```--pretty``` Show commits in an alternate format. Option values include oneline, short,  
 ```full, fuller, and format``` (where you specify your own format).  
 ```--oneline``` Shorthand for --pretty=oneline --abbrev-commit used together.  
-```$ git log -S <Text>``` Checks last time text was changed (Could be useful for checking the last time a reference to a function was changed)  
+```$ git log -S <Text>``` Checks last time text was changed (Could be useful for checking the last time a reference to a function was changed)
 
 ### Limiting output
 ```-<n>``` Show only the last n commits  
 ```--since, --after``` Limit the commits to those made after the specified date.  
 ```--until, --before``` Limit the commits to those made before the specified date.  
-```--author``` Only show commits in which the author entry matches the
-specified string.  
-```--committer``` Only show commits in which the committer entry matches the
-specified string.  
+```--author``` Only show commits in which the author entry matches the specified string.  
+```--committer``` Only show commits in which the committer entry matches the specified string.  
 ```--grep``` Only show commits with a commit message containing the string  
 ```-S``` Only show commits adding or removing code matching the string  
 ```--no-merges``` Removes merge commits
 
 ## Working with remotes
 ```$ git remote -v``` Shows remote    
-```$ git remote add <shortname> <url>``` Adding a remote
-```$ git remote show <shortname>``` Shows information about remote branch
-```$ git remote rename <shortname> <newname>``` Rename
-```$ git remote remove|rm <shortname>``` Remove remote
-
+```$ git remote add <shortname> <url>``` Adding a remote  
+```$ git remote show <shortname>``` Shows information about remote branch  
+```$ git remote rename <shortname> <newname>``` Rename  
+```$ git remote remove|rm <shortname>``` Remove remote  
 ```$ git fetch ``` Gets all the information that you do not have yet on your local machine  
 ```$ git fetch <shortname>``` Gets all the information that you do not have yet on your local machine  
-NOTE: When cloning a repo it automatically adds that remote repository under the name 'origin'
+NOTE: When cloning a repo it automatically adds that remote repository under the name 'origin'  
 ```$ git push origin master``` Push master branch to url pointed by origin
 
 ## Tagging
 ```$ git tag``` Lists tags  
 ```$ git tag -l <wildcard pattern>``` Tags that match wildcard pattern  
-NOTE: Annotated tags are stored in full, lightweights are not.
+NOTE: Annotated tags are stored in full, lightweights are not.  
 Annotated tags are considered best practice, whereas lightweights should only be used for temporary purposes.  
 ```$ git tag -a <tag-name> -m "<message>"``` Create annotated tag  
 ```-s``` Allows to sign the tag  
 ```$git show <tag-name>``` Check the tag data along with the commit that was tagged  
 ```$git tag -a <tag-name> -m "<message>" <commit-hash>``` Add tag to commit-hash  
-```$ git tag -d <tag-name>``` To delete a local tag
-```$ git push origin --delete <tag-name>``` To delete a remote tag
-```$ git checkout <tag-name>``` To check tag
+```$ git tag -d <tag-name>``` To delete a local tag  
+```$ git push origin --delete <tag-name>``` To delete a remote tag  
+```$ git checkout <tag-name>``` To check tag  
 ```$ git checkout -b <branchname> <tagname>``` To create a branch from tag to be able to see changes
 
 ## Git aliases
@@ -136,7 +133,7 @@ Annotated tags are considered best practice, whereas lightweights should only be
 ```$ git config --global alias.st status```  st = status  
 ```$ git config --global alias.unstage 'reset HEAD --'``` Unstage is equal to reset head  
 ```$ git config --global alias.last 'log -1 HEAD'``` Check last commit  
-```$ git config --global alias.visual '!gitk'``` Running external commands  
+```$ git config --global alias.visual '!gitk'``` Running external commands
 
 ## Git branches
 ```$ git branch <branch-name>``` Create a branch with branch-name based on current HEAD  
@@ -157,7 +154,7 @@ Annotated tags are considered best practice, whereas lightweights should only be
 Note: merged branches can be deleted as their features are already taken into account in the current checked out branch.  
 ```$ git branch --move bad-branch-name corrected-branch-name``` Rename branch from bad-branch-name to corrected-branch-name locally  
 ```$ git push --set-upstream origin corrected-branch-name``` Push corrected-branch-name  
-```$ git push origin --delete bad-branch-name``` Delete bad-branch-name  
+```$ git push origin --delete bad-branch-name``` Delete bad-branch-name
 
 ## Remote Branches
 ```$ git remote show <remote>``` Show information about remote branch  
@@ -168,26 +165,26 @@ Note: merged branches can be deleted as their features are already taken into ac
 ```$ git branch -u origin/serverfix``` Make local branch track origin/serverfix  
 ```$ git branch -vv``` To check branches and w  
 ```$ git fetch --all``` Get information for all remote branches  
-```$ git pull``` === git fetch + git merge  
+```$ git pull``` === git fetch + git merge
 
 ## Stashing
-```$ git stash``` Stash current changes
-```$ git stash push``` Stash current changes
-```$ git stash save``` Stash current changes
-```$ git stash --keep-index``` Stash current changes and staged files
-```$ git stash apply``` Apply last stashed, do not set staged
-```$ git stash apply --index``` Apply last stashed, and set staged as previously
-```$ git stash apply stash@{0}``` Apply stash@{0}
-```$ git stash -u``` stash unstaged files
-```$ git stash --all``` Stash all files including the ones that are not tracked and the ones that are ignored "gitignore"
+```$ git stash``` Stash current changes  
+```$ git stash push``` Stash current changes  
+```$ git stash save``` Stash current changes  
+```$ git stash --keep-index``` Stash current changes and staged files  
+```$ git stash apply``` Apply last stashed, do not set staged  
+```$ git stash apply --index``` Apply last stashed, and set staged as previously  
+```$ git stash apply stash@{0}``` Apply stash@{0}  
+```$ git stash -u``` stash unstaged files  
+```$ git stash --all``` Stash all files including the ones that are not tracked and the ones that are ignored "gitignore"  
 ```$ git stash -p``` Stash interactively
 
 ## Git Clean
 ```$ git clean``` Remove files that are not tracked  
 ```$ git clean -d``` Removes files that are not tracked and any subdirectories that would be empty as a result  
 ```$ git clean -n``` Dry run of clean. This command shows what are the files that would be removed from running clean  
-```$ git clean -f``` Force clean. "Can be mandatory if clean.requireForce is set to true"
-```$ git clean -x``` Clean files that match gitignore
+```$ git clean -f``` Force clean. "Can be mandatory if clean.requireForce is set to true"  
+```$ git clean -x``` Clean files that match gitignore  
 ```$ git clean -i``` Clean interactively
 
 ## Git search
