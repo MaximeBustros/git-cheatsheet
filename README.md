@@ -1,4 +1,5 @@
 # Git Cheatsheet
+List of most commands used in the [progit book](https://git-scm.com/book/en/v2)
 
 ## Settings
 ```$ git config --list``` View all settings  
