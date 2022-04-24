@@ -40,6 +40,7 @@ Note: Keys can appear more than once because git reads the configuration from di
 
 ## Remove changes
 ``` $ git checkout -- <file>``` Remove changes to a file
+``` $ git checkout <commit-hash or branch-name> -- <file>``` Set a file to a certain commit's file
 
 ## Status command
 ``` $ git status``` Checking status of the working directory  
